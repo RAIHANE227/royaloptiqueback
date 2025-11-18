@@ -17,6 +17,10 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('phone')->nullable();
             $table->enum('role', ['user', 'admin'])->default('user');
+            $table->string('address')->nullable();
+            $table->string('city')->nullable();
+            $table->string('wilaya')->nullable();
+            $table->string('postal_code', 20)->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
